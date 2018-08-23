@@ -7,9 +7,6 @@ public class Sentence implements Element {
     private StringBuilder sentence;
 
 
-    public Sentence() {
-        this.sentence = new StringBuilder();
-    }
     public Sentence(StringBuilder sentence) {
         this.sentence = sentence;
     }
@@ -34,7 +31,7 @@ public class Sentence implements Element {
 
     @Override
     public void print(){
-        System.out.println(sentence);
+        System.out.print(sentence);
     }
 
 }

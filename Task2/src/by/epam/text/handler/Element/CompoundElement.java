@@ -1,6 +1,7 @@
 package by.epam.text.handler.Element;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -8,11 +9,11 @@ import java.util.List;
 // компонентов.
 public class CompoundElement implements Element{
 
-    private List<Element> elements;
+    private List<Element> elements = new ArrayList<>();
 
 
-    public CompoundElement(){
-        elements = new ArrayList<>();
+    public CompoundElement(Element...components){
+        add(components);
     }
 
 
@@ -20,17 +21,31 @@ public class CompoundElement implements Element{
         elements.add(element);
     }
 
+    public void add(Element... element){
+        elements.addAll(Arrays.asList(element));
+    }
+
+
     public void remove(Element element){
         elements.remove(element);
     }
 
-
-    public void setElements(List<Element> elements) {
-        this.elements = elements;
+    public void remove(Element... element){
+        elements.removeAll(Arrays.asList(element));
     }
 
-    public List<Element> getElements() {
+
+    public void clear(){
+        elements.clear();
+    }
+
+
+    public List<Element> get() {
         return elements;
+    }
+
+    public void set(List<Element> elements) {
+        this.elements = elements;
     }
 
 
