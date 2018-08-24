@@ -5,5 +5,6 @@ public final class CompletionSigns {
     public static final char DOT = '.';
     public static final char QuestionMark = '?';
     public static final char ExclamationMark = '!';
+    public static final char COMMA = ',';
 
 }

@@ -53,6 +53,7 @@ public class CompoundElement implements Element{
     public void print() {
         for (Element element : this.elements) {
             element.print();
+            System.out.println("\n");
         }
     }
 

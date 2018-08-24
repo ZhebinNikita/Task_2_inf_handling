@@ -7,15 +7,15 @@ import by.epam.text.handler.Element.Sentence;
  * 11.	В каждом предложении текста исключить подстроку максимальной длины,
  * начинающуюся и заканчивающуюся заданными символами.
  * */
-public class TextHandler {
+public class TaskHandler {
 
     private StringBuilder text;
 
 
-    public TextHandler(){
+    public TaskHandler(){
         this.text = new StringBuilder();
     }
-    public TextHandler(StringBuilder text) {
+    public TaskHandler(StringBuilder text) {
         this.text = text;
     }
 
